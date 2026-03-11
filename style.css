@@ -1,0 +1,149 @@
+/* تنسيقات عامة للخط والصفحة */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif; /* استخدام خط Cairo الناعم */
+}
+
+body {
+    background-color: #f4f7f6; /* لون خلفية رمادي فاتح جداً وهادئ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #444;
+}
+
+/* الحاوية الرئيسية */
+.main-wrapper {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* ظل ناعم جداً */
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* الرأس */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    font-size: 26px;
+    color: #2c3e50; /* لون كحلي غامق هادئ */
+    font-weight: 700;
+}
+
+.header .icon {
+    font-size: 28px;
+}
+
+.description {
+    color: #7f8c8d; /* لون رمادي ناعم للوصف */
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* منطقة الإدخال */
+.input-area {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 130px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #e0e6ed; /* حدود فاتحة */
+    font-size: 16px;
+    resize: none; /* منع تغيير الحجم يدوياً */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fafbfd;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #a8d0e6; /* لون أزرق سماوي ناعم عند التركيز */
+    box-shadow: 0 0 10px rgba(168, 208, 230, 0.4);
+}
+
+/* زر التحليل */
+.analyze-btn {
+    background-color: #5dade2; /* أزرق سماوي مريح */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(93, 173, 226, 0.3);
+}
+
+.analyze-btn:hover {
+    background-color: #4a90e2; /* أزرق أغمق قليلاً عند التمرير */
+}
+
+.analyze-btn:active {
+    transform: scale(0.97); /* تأثير ضغط بسيط */
+}
+
+/* بطاقة النتيجة */
+.result-card {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fafbfd;
+    border: 1px solid #e0e6ed;
+    transition: all 0.4s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.result-card.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    display: none;
+}
+
+.result-label {
+    font-size: 14px;
+    color: #95a5a6;
+    margin-bottom: 8px;
+}
+
+.result-text {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* ألوان النتائج */
+.positive { color: #27ae60; } /* أخضر هادئ للايجابي */
+.negative { color: #e74c3c; } /* أحمر هادئ للسلبي */
+.neutral { color: #7f8c8d; } /* رمادي للمحايد */

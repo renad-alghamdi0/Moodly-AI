@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محلل المشاعر الذكي | Sentiment Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="container">
+            <div class="header">
+                <span class="icon">✨</span>
+                <h1>محلل التعليقات الذكي</h1>
+            </div>
+            
+            <p class="description">اكتب تعليقك أدناه، وسنقوم بتحليل مشاعره (إيجابي أو سلبي) فوراً.</p>
+            
+            <div class="input-area">
+                <textarea id="commentInput" placeholder="ابدأ الكتابة هنا... مثلاً: 'الخدمة كانت رائعة وسريعة'"></textarea>
+            </div>
+            
+            <button class="analyze-btn" onclick="analyzeSentiment()">
+                <span>تحليل المشاعر</span>
+                <span class="btn-icon">🔍</span>
+            </button>
+            
+            <div id="resultCard" class="result-card hidden">
+                <div class="result-content">
+                    <p class="result-label">نتيجة التحليل:</p>
+                    <div id="resultText" class="result-text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
